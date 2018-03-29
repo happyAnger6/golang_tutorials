@@ -1,6 +1,9 @@
 package main
 
-import "sort"
+import (
+	"sort"
+	"fmt"
+)
 
 func topoSort(m map[string][]string) []string {
 	var order []string
@@ -15,7 +18,6 @@ func topoSort(m map[string][]string) []string {
 			}
 		}
 	}
-	return order
 
 	var keys []string
 	for key := range m {
@@ -35,6 +37,16 @@ var prereqs = map[string][]string {
 		"computer organization",
 	},
 	"data structures": {"discrete math"},
+	"databases": {"data structures"},
+	"discrete math": {"intro to programming"},
+	"formal languages": {"discrete math"},
+	"networks": {"operating systems"},
+	"operating systems": {"data structures", "computer organization"},
+	"programming languages": {"data structures", "computer organization"},
+}
+
+func main() {
+	fmt.Printf("%#v\n", topoSort(prereqs))
 }
 
 
