@@ -5,5 +5,5 @@ import (
 )
 
 type Element interface {
-	Parse(scan *parser.Scanner) (interface{}, error)
+	Parse(scan *parser.Scanner) (Element, error)
 }

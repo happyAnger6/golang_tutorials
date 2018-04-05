@@ -1,14 +1,17 @@
 package attributes
 
-import "../parser"
+import (
+	"../parser"
+	"../../yangparser"
+)
 
 type YangVersion struct {
 	Version string
 }
 
-func (y *YangVersion) Parse(scan *parser.Scanner) *YangVersion {
+func (y *YangVersion) Parse(scan *parser.Scanner) (yangparser.Element, error) {
 	if scan.Scan() {
 		y.Version = scan.Text()
 	}
-	return y
+	return y, nil
 }
