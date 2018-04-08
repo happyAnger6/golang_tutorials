@@ -24,4 +24,5 @@ func maxSubstr(s string) (maxStart, maxEnd, maxLen int) {
 func main() {
 	fmt.Println(maxSubstr("aabcabcbb"))
 	fmt.Println(maxSubstr("aabcdabcfebb"))
+	fmt.Println(maxSubstr("acdafbe"))
 }
