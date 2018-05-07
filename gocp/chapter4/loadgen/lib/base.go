@@ -56,7 +56,7 @@ type CallResult struct {
 }
 
 const (
-	STATUS_ORGINAL uint32 = 0
+	STATUS_ORIGINAL uint32 = 0
 	// STATUS_STARTING 代表正在启动。
 	STATUS_STARTING uint32 = 1
 	// STATUS_STARTED 代表已启动。
